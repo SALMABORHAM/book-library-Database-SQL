@@ -1,0 +1,56 @@
+ CREATE TABLE EMPLOYEE
+(Name    VARCHAR2(50)     NOT NULL,
+ID        NUMBER(8)      NOT NULL,  
+Gander   CHAR(6)     NOT NULL,
+DOB       DATA(9)              NOT NULL,
+Salary  VARCHAR2(10000)                 NOT NULL,
+Mobile     number(11)              NOT NULL,
+Address  VARCHAR2(20), 
+PRIMARY KEY(EmployeeID));
+
+CREATE TABLE PRODUCT
+(Name    VARCHAR2(50)     NOT NULL,
+ID        NUMBER(8)                NULL,
+Price       NUMBER(100)          NOT NULL,
+TYPE           VARCHAR2(4)        NOT NULL,
+Available_Quantity VARCHAR2 (90),
+PRIMARY KEY(ProductID));
+
+
+CREATE TABLE BOOKS
+(Name    VARCHAR2(50)     NOT NULL,
+ID     NUMBER(8)                  NOT NULL,
+Author      VARCHAR2(30)     NOT NULL,
+Price       NUMBER(100)             NOT NULL,
+Category     VARCHAR2(6) ,
+PRIMARY KEY(BooksID));
+
+CREATE TABLE CUSTOMER
+(Name    VARCHAR2(30)     NOT NULL,
+ID     NUMBER(8)                  NOT NULL,
+Mobile    NUMBER(11)               NOT NULL,
+Address    VARCHAR2(20)              NOT NULL,
+E-mail  VARCHAR(50),
+PRIMARY KEY(CustomerID));
+
+
+CREATE TABLE SUPPLIER
+(Name    VARCHAR2(30)     NOT NULL,
+ID      NUMBER(8)                 NOT NULL,
+Mobile           NUMBER(11)        NOT NULL,
+Address  VARCHAR2(20)                NOT NULL,
+E-mail   VARCHAR2(50)   NOT NULL,
+Phone VARCHAR(50),
+PRIMARY KEY(SupplierID));
+
+
+CREATE TABLE AUTHOR
+(Name    VARCHAR2(30)     NOT NULL,
+ID       NUMBER(10)                NOT NULL,
+E-mail     VARCHAR(30)              NOT NULL,
+Number_Of_Books      NUMBER(100),
+PRIMARY KEY(AuthorID));
+
+select * from EMPLOYEE
+
+insert into EMPLOYEE('ID','name','gender','DOB','salary','mobile','address') values ('17105510','salma','female','9/9/1999','100','01234567890','AASTMT')
